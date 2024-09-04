@@ -1,0 +1,9 @@
+body{
+    background-color: darkslategray;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: aquamarine;
+}
+img {
+    width: 80%;
+    align-self: center;
+}
