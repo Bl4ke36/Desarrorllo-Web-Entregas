@@ -1,9 +1,39 @@
 .text {
-    color: aquamarine;
+    color: rgb(0, 94, 138);
 }
 .bg{
-    background-color: black;
+    background-color: rgb(17, 17, 17);
 }
+.bg-blue{
+    background-color: rgb(0, 24, 70);
+}
+
 .row{
     width: 100%;
+    font-size: 1.7rem;
+}
+.col{
+    margin-top: 1rem;
+}
+iframe{
+    width: 800px;
+    height: 450px;;
+}
+.size{
+    font-size: 1.7rem;
+}
+.w{
+    width: 270px;
+}
+@media (max-width: 800px) {
+    iframe{
+        width: 600px;
+        height: 338px;;
+    }
+}
+@media (max-width: 700px) {
+    iframe{
+        width: 400px;
+        height: 225px;;
+    }
 }

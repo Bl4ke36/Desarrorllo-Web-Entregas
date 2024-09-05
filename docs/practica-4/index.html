@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>TASM</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
-  <body class="bg">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
+  <body class="bg text">
+        <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">The Amazing Spider-Man</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,26 +20,123 @@
                     <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Sinópsis</a>
+                    <a class="nav-link" href="#sinop">Sinópsis</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Personajes</a>
+                    <a class="nav-link" href="#chara">Personajes</a>
                   </li>
                   <li class="nav-item"></li>
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="#contact">Contacto</a>
                   </li>
                 </ul>
               </div>
             </div>
-        </nav>
-        <div class="container-fluid text-center">
-            <div class="row">
+        </nav>  
+        <div class="container text-center">
+            <h2 id="info">Info</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-1"></div>
                 <div class="col-lg-4 col-sm-12 col-md-6">
-                    <img class="img-fluid" src="/docs/img/Tasm-poster.webp" alt="">
+                    <img class="img-fluid" src="Tasm-poster.webp" alt="poster">
                 </div>
-                <div class="col-sm-4">col-sm-4</div>
+                <div class="col-lg-2 col-md-1"></div>
+                <div class="col-sm-4 text">The Amazing Spider-Man es una película estadounidense de accion y superheroes hecha por Columbia Pictures y dirigida por Marc Webb salida en el año 2012</div>
+            </div>
+            <div class="col">
+                <iframe src="https://www.youtube.com/embed/upwf8RsyNqQ?si=3sWiQaeOadf_OHRA" title="Official THE AMAZING SPIDER-MAN Teaser Trailer  " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
             </div>
         </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <div class="container text-center" id="sinop">
+            <h2>Sinópsis</h2>
+            <p class="size">
+                Peter parker, en la busqueda de la verdad acerca de la muerte de sus padres termina llegando a Oscorp y es ahí donde obtendrá sus poderes conocera al doctor Curt Connors que podria tener informacion clave sobre su padre pero el intento sera en vano pues el doctor gracias a un experimento se convertira en "el Lagarto" y Peter, siguiendo la ultima volutad de su tío, tendra que ponerse la mascara y tomar el papel de el hombre araña para proteger a la ciudad y a los que quiere.
+            </p>
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="tasm1.jpg" class="d-block w-100" alt="tasm1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="tasm2.jpg" class="d-block w-100" alt="tasm2   ">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="tasm3.jpg" class="d-block w-100" alt="tasm3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="container text-center" id="chara">
+            <h2>Personajes</h2>
+            <div class="accordion bg-dark border-bottom border-body" data-bs-theme="dark" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Peter Parker
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">    
+                        <p>
+                            Protagonista y la identidad secreta de Spider-Man
+                        </p>
+                      <img src="Peter.webp" alt="Peter" class="w">
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Gwen Stacy
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>
+                            Interes amoroso de Peter y personaje clave para el desarrollo de la identidad de heroe de Peter
+                        </p>
+                      <img src="Gwen.webp" alt="Gwen" class="w">
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Accordion Item #3
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>
+                            Antagonista principal de la pelicula, se convierte en el lagarto al tratar de encontrar un modo de recuperar su brazo
+                        </p>
+                      <img src="Curt.webp" alt="Curt" class="w">
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="container-fluid bg-blue" id="contact">
+            <h2 class="ms-5">Contactos</h2>
+            <a target="_blank" href="https://es.wikipedia.org/wiki/The_Amazing_Spider-Man_(película)" class="px-5" data-bs-toggle="tooltip" data-bs-title="Pagina Wikipedia"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-wikipedia" viewBox="0 0 16 16">
+                <path d="M8.835 3.003c.828-.006 2.688 0 2.688 0l.033.03v.288q0 .12-.133.12c-.433.02-.522.063-.68.29-.087.126-.258.393-.435.694l-1.52 2.843-.043.089 1.858 3.801.113.031 2.926-6.946q.152-.42-.044-.595c-.132-.114-.224-.18-.563-.195l-.275-.014a.16.16 0 0 1-.096-.035.1.1 0 0 1-.046-.084v-.289l.042-.03h3.306l.034.03v.29q0 .117-.133.117-.65.03-.962.281a1.64 1.64 0 0 0-.488.704s-2.691 6.16-3.612 8.208c-.353.672-.7.61-1.004-.019A224 224 0 0 1 8.044 8.81c-.623 1.285-1.475 3.026-1.898 3.81-.411.715-.75.622-1.02.019-.45-1.065-1.131-2.519-1.817-3.982-.735-1.569-1.475-3.149-1.943-4.272-.167-.4-.293-.657-.412-.759q-.18-.15-.746-.18Q0 3.421 0 3.341v-.303l.034-.03c.615-.003 3.594 0 3.594 0l.034.03v.288q0 .119-.15.118l-.375.016q-.483.02-.483.288-.002.125.109.4c.72 1.753 3.207 6.998 3.207 6.998l.091.023 1.603-3.197-.32-.71L6.24 5.095s-.213-.433-.286-.577l-.098-.196c-.387-.77-.411-.82-.865-.88-.137-.017-.208-.035-.208-.102v-.304l.041-.03h2.853l.075.024v.303q0 .104-.15.104l-.206.03c-.523.04-.438.254-.09.946l1.057 2.163 1.17-2.332c.195-.427.155-.534.074-.633-.046-.055-.202-.144-.54-.158l-.133-.015a.16.16 0 0 1-.096-.034.1.1 0 0 1-.045-.085v-.288l.041-.03Z"></path>
+            </svg></a>    
+            <a target="_blank" href="https://www.sonypictures.com.mx" class="text size" data-bs-toggle="tooltip" data-bs-title="Pagina estudio">
+                sonypictures
+            </a>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
