@@ -4,9 +4,49 @@ const $totalCarrito = d.querySelector("#total-carrito");
 const $btnCompra = d.querySelector("#btn-compra");
 const $mensajeCompra = d.querySelector("#mensaje-compra");
 const $carrito = d.querySelector("#carrito");
-const $loader = d.querySelector("#loader")
+const $loader = d.querySelector("#loader");
+const $exitloader = d.querySelector(".float-bg");
+const $btnplus = d.querySelectorAll("#plus");
+const $btnminus = d.querySelectorAll("#minus");
 
-d.addEventListener("click", function (e) {
+$btnplus.forEach((item) => {
+  item.addEventListener('click', () => {
+    const $producto = item.parentElement;
+    let nombre = $producto.getAttribute("data-nombre");
+    let precio = parseFloat($producto.getAttribute("data-precio"));
+  
+    const $itemCarrito = d.createElement("li");
+    $itemCarrito.innerText = `${nombre} - $${precio}`;
+    $itemCarrito.classList.add("article");
+    $itemCarrito.classList.add(nombre);
+  
+    $listaCarrito.appendChild($itemCarrito);
+  
+    let totalActual = parseFloat($totalCarrito.innerText);
+    $totalCarrito.innerText = (totalActual + precio).toFixed(2);
+  })
+});
+
+$btnminus.forEach((item) => {
+  item.addEventListener('click', () => {
+    const $producto = item.parentElement;
+    let nombre = $producto.getAttribute("data-nombre");
+    let precio = parseFloat($producto.getAttribute("data-precio"));
+    const $productos = d.querySelectorAll(".article");
+     
+    for (var i = 0; i < $productos.length; ++i) {
+      let article = $productos[i];
+      if (article.classList.contains(nombre)){
+        article.remove();
+        let totalActual = parseFloat($totalCarrito.innerText);
+        $totalCarrito.innerText = (totalActual - precio).toFixed(2);
+        break;
+      }
+    }
+  })
+});
+
+/*d.addEventListener("click", function (e) {
   if (!e.target.matches(".producto")) {
     return false;
   }
@@ -23,9 +63,9 @@ d.addEventListener("click", function (e) {
 
   let totalActual = parseFloat($totalCarrito.innerText);
   $totalCarrito.innerText = (totalActual + precio).toFixed(2);
-});
+});*/
 
-$listaCarrito.addEventListener("click", function (e) {
+/*$listaCarrito.addEventListener("click", function (e) {
   if (e.target.tagName === "LI") {
     const $item = e.target;
     $item.remove();
@@ -36,7 +76,7 @@ $listaCarrito.addEventListener("click", function (e) {
     let totalActual = parseFloat($totalCarrito.innerText);
     $totalCarrito.innerText = (totalActual - precio).toFixed(2);
   }
-});
+});*/
 
 $btnCompra.addEventListener("click", function (e) {
   console.log($listaCarrito.children);
@@ -49,9 +89,17 @@ $btnCompra.addEventListener("click", function (e) {
             clearInterval(countdownTimer);
             $loader.classList.remove("loader")
             $loader.textContent = "¡Compra realizada con exito!"
+            $exitloader.classList.add("exit")
         }
     }, 1000);
   } else {
     alert("El carrito está vacío, no se puede realizar la compra.");
+  }
+});
+
+$exitloader.addEventListener("click",function (e) {
+  if ($exitloader.classList.contains("exit")){
+    $mensajeCompra.classList.add("hidden");
+    $exitloader.classList.remove("exit");
   }
 });
