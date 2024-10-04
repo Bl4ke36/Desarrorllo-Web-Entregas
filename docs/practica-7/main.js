@@ -43,7 +43,7 @@ function validateForm(e) {
   }
 
   //Validar Password
-  let passwordPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()\-+={}[\]:;"'<>,.?\/|\\]).{8,}/;
+  let passwordPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()\-+={}[\]:;"'<>,.?\/|\\])/;
   if ($passwordInput.value.trim() === "") {
     $passwordError.innerText = "La contraseña es obligatorio";
     isValid = false;
